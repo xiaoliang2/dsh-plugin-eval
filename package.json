@@ -1,5 +1,5 @@
 {
-  "name": "dsh-plugin-eval",
+  "name": "@xiaobanli/dsh-plugin-eval",
   "version": "0.1.0",
   "description": "Comprehensive pre-install evaluation for DeepSeek Harness plugins: security scan, footprint benchmark, community review aggregation and version compatibility check, scored like npm audit + Lighthouse. 安装前综合评估：安全扫描 / 性能基准 / 社区评价聚合 / 版本兼容验证。",
   "license": "MIT",
@@ -17,6 +17,10 @@
   "homepage": "https://github.com/xiaoliang2/dsh-plugin-eval#readme",
   "bugs": {
     "url": "https://github.com/xiaoliang2/dsh-plugin-eval/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "files": [
     "lib/**",
