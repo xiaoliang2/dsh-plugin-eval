@@ -1,0 +1,17 @@
+{
+  "name": "demo-risky-plugin",
+  "version": "0.0.1",
+  "description": "A deliberately risky plugin for tests.",
+  "main": "src/index.js",
+  "dependencies": {
+    "left-pad": "^1.3.0",
+    "request": ">=2.88.0",
+    "is-odd": "*",
+    "local-thing": "file:../local"
+  },
+  "scripts": {
+    "postinstall": "node scripts/pwn.js",
+    "prepare": "make build"
+  },
+  "keywords": []
+}

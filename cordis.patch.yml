@@ -1,0 +1,13 @@
+# dsh-plugin-eval bundle patch.
+#
+# Installs the plugin as one Cordis row. The package's committed entry
+# (lib/index.js, declared by `dsh.bundle.patch`) exports the Cordis plugin
+# `{ name, inject, apply }`, so the loader mounts it and registers the
+# `plugin_eval` model tool under the host `tools` registry.
+#
+# Declared as a peer dependency of the runtime, `@deepseek-ai/dsh-tools` is
+# resolved from the Host's own copy; no build step runs at install time.
+
+- insert:
+    - id: plugin-eval
+      name: dsh-plugin-eval

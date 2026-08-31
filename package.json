@@ -1,0 +1,62 @@
+{
+  "name": "dsh-plugin-eval",
+  "version": "0.1.0",
+  "description": "Comprehensive pre-install evaluation for DeepSeek Harness plugins: security scan, footprint benchmark, community review aggregation and version compatibility check, scored like npm audit + Lighthouse. 安装前综合评估：安全扫描 / 性能基准 / 社区评价聚合 / 版本兼容验证。",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./engine": "./lib/engine/index.js",
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoliang2/dsh-plugin-eval.git"
+  },
+  "homepage": "https://github.com/xiaoliang2/dsh-plugin-eval#readme",
+  "bugs": {
+    "url": "https://github.com/xiaoliang2/dsh-plugin-eval/issues"
+  },
+  "files": [
+    "lib/**",
+    "docs/**",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md",
+    "README.zh.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "4.x",
+    "@deepseek-ai/dsh-tools": "0.x"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "deepseek",
+    "dsh",
+    "plugin",
+    "audit",
+    "security",
+    "benchmark",
+    "supply-chain",
+    "evaluation"
+  ]
+}
